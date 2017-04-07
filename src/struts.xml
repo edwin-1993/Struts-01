@@ -11,11 +11,16 @@
     <!--许可action名中的斜线-->
 
     <package name="prim.edwin.struts01" extends="struts-default">
+
+        <default-action-ref name="hello" />
+
         <action name="hello" class="prim.edwin.struts01.HelloAction" method="execute">
-            <result name="error">/Error.jsp</result>
-            <result name="success">/Hello.jsp</result>
+            <result name="error">/WEB-INF/Error.jsp</result>
+            <result name="numlist">/WEB-INF/Numlist.jsp</result>
+            <result name="success">/WEB-INF/Hello.jsp</result>
             <!--action对应的result响应需要创建后对应添加。-->
         </action>
+
     </package>
 
 </struts>

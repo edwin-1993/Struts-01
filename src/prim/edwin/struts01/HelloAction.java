@@ -10,6 +10,9 @@ public class HelloAction {
         if (getName().equals("")||getName() == null){
             return "error";
         }
+        if (getName().equals("123456")){
+            return "numlist";
+        }
         return "success";
     }
 

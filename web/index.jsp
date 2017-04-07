@@ -15,8 +15,7 @@
 <h1> welcome </h1>
 <form action="hello.action" method="post">
   <label for = "name"> input your name !</label>
-  <input type = "text" id = "name" name = "name"/>
-  <input type = "submit" value="Enter"/>
+  <input type = "text" id = "name" name = "name" value="input your name"/>
   <input type = "submit" value="Enter"/>
 </form>
 </body>
