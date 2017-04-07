@@ -17,6 +17,7 @@
   <label for = "name"> input your name !</label>
   <input type = "text" id = "name" name = "name"/>
   <input type = "submit" value="Enter"/>
+  <input type = "submit" value="Enter"/>
 </form>
 </body>
 </html>
