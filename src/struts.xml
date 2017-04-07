@@ -5,4 +5,17 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+    <!--constant标签为常量设置-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <constant name="struts.enable.SlashesInActionNames" value="true"/>
+    <!--许可action名中的斜线-->
+
+    <package name="prim.edwin.struts01" extends="struts-default">
+        <action name="hello" class="prim.edwin.struts01.HelloAction" method="execute">
+            <result name="error">/Error.jsp</result>
+            <result name="success">/Hello.jsp</result>
+            <!--action对应的result响应需要创建后对应添加。-->
+        </action>
+    </package>
+
 </struts>
