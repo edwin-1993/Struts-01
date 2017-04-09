@@ -9,6 +9,9 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <constant name="struts.enable.SlashesInActionNames" value="true"/>
     <!--许可action名中的斜线-->
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+
+    <!--许可静态参数与方法-->
 
     <package name="prim.edwin.struts01" extends="struts-default">
 
@@ -20,7 +23,15 @@
             <result name="success">/WEB-INF/Hello.jsp</result>
             <!--action对应的result响应需要创建后对应添加。-->
         </action>
+    </package>
+    
+    <package name="prim.edwin.struts02" extends="struts-default">
+        <action name="upload" class="prim.edwin.struts02.UpLoadAction" method="execute">
+            <param name="savePath">/upLoadFiles</param>
+            <result name="success">/WEB-INF/Success.jsp</result>
+            <result name="error">/WEB-INF/Error.jsp</result>
 
+        </action>
     </package>
 
 </struts>

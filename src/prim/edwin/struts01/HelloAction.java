@@ -5,6 +5,7 @@ package prim.edwin.struts01;
  */
 public class HelloAction {
     private String name;
+    public int testvalue = 100;
 
     public String execute() throws Exception{
         if (getName().equals("")||getName() == null){
@@ -14,6 +15,10 @@ public class HelloAction {
             return "numlist";
         }
         return "success";
+    }
+
+    public int testInt(){
+        return 99;
     }
 
     public String getName() {

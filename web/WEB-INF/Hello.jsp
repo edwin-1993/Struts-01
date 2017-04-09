@@ -9,15 +9,20 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%--taglib 用于引入标签，当插入其它语言时需要--%>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>HelloJspAction</title>
 </head>
 <body>
 
 <div>
-    <h1>hello world & jsp <s:property value = "name"></s:property></h1>
+    <h1>hello world & jsp <s:property value = "name"/></h1>
     <h1>hello world</h1>
+    <h1>testvalue = <s:property value="@prim.edwin.struts01.HelloAction@testvalue"/></h1>
+    <h1>prim.edwin.struts01.helloaction.test();<s:property value="@prim.edwin.struts01.HelloAction@test()"/></h1>
+    <%--<h1>max(2,3)=<s:property value="@@max(2, 3)"></s:property></h1>--%>
+
+
 </div>
 
 </body>

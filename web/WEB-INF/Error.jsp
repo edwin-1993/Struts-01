@@ -12,6 +12,6 @@
     <title>Error</title>
 </head>
 <body>
-YOU DID NOT ENTERED THE NAME
+MISS INPUT;
 </body>
 </html>
