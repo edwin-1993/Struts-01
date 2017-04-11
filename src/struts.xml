@@ -26,6 +26,7 @@
     </package>
     
     <package name="prim.edwin.struts02" extends="struts-default">
+        
         <action name="upload" class="prim.edwin.struts02.UpLoadAction" method="execute">
 
             <interceptor-ref name="fileUpload">
@@ -35,7 +36,9 @@
                 <param name="maximumSize">20480</param>
                 <!--bytes-->
             </interceptor-ref>
-            
+
+            <interceptor-ref name="defaultStack"/>
+
             <param name="savePath">/upLoadFiles</param>
             <!--param标签初传入了savePath变量的内容-->
             <result name="success">/WEB-INF/Success.jsp</result>
@@ -55,6 +58,8 @@
                 <!--bytes-->
             </interceptor-ref>
 
+            <interceptor-ref name="defaultStack"/>
+            <!--拦截器拦截结束后需要还原为default-->
             <param name="savePath">/multiUpload</param>
             <result name="success">/WEB-INF/MultiSuccess.jsp</result>
             <result name="error">/WEB-INF/Error.jsp</result>
