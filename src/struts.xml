@@ -27,11 +27,44 @@
     
     <package name="prim.edwin.struts02" extends="struts-default">
         <action name="upload" class="prim.edwin.struts02.UpLoadAction" method="execute">
+
+            <interceptor-ref name="fileUpload">
+                <!--拦截器-->
+                <param name="allowedTypes">text/plain,image/png,image/gif,image/jpeg</param>
+                <!--filetypes-->
+                <param name="maximumSize">20480</param>
+                <!--bytes-->
+            </interceptor-ref>
+            
             <param name="savePath">/upLoadFiles</param>
+            <!--param标签初传入了savePath变量的内容-->
             <result name="success">/WEB-INF/Success.jsp</result>
             <result name="error">/WEB-INF/Error.jsp</result>
+        </action>
+
+        <action name="GoMulti" class="prim.edwin.struts02.GoMulti" method="execute">
+            <result name="success">/WEB-INF/MultiUpload.jsp</result>
+        </action>
+
+        <action name="multiUpload" class="prim.edwin.struts02.MultiUpLoadAction" method="execute">
+            <interceptor-ref name="fileUpload">
+                <!--拦截器-->
+                <param name="allowedTypes">text/plain,image/png,image/gif,image/jpeg</param>
+                <!--filetypes-->
+                <param name="maximumSize">20480</param>
+                <!--bytes-->
+            </interceptor-ref>
+
+            <param name="savePath">/multiUpload</param>
+            <result name="success">/WEB-INF/MultiSuccess.jsp</result>
+            <result name="error">/WEB-INF/Error.jsp</result>
+            <result name="input">/WEB-INF/inputError.jsp</result>
+            <!--index.jsp 暂时用于响应input输入文件过大-->
 
         </action>
+
+
     </package>
+
 
 </struts>

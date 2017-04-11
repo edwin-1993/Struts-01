@@ -27,15 +27,17 @@ public class UpLoadAction extends ActionSupport {
     private String upLoadFileName;
 //    文件、文件名、文件类型，这3个变量的命名有一定规则，否则会出现空指针错误。
 //    此规则为，如果“文件”这个变量被命名为 xyz，则“文件名”必须命名为 xyzFileName，“文件类型”必须被命名为 xyzContentType。
-
     private String savePath;
+    private String filePath;
 
     public String execute() throws Exception{
 
         String realPath = getSavePath();//获取真实路径。
 
+
         if (upLoad != null){
             File saveFile = new File(realPath,getUpLoadFileName());
+
             //通过路径和文件名创建File实例。
             if (!saveFile.getParentFile().exists()){
 //                boolean mkdirResult = saveFile.getParentFile().mkdir();
@@ -89,5 +91,13 @@ public class UpLoadAction extends ActionSupport {
 
     public void setSavePath(String savePath) {
         this.savePath = savePath;
+    }
+
+    public String getFilePath() {
+        return getSavePath();
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
     }
 }

@@ -30,12 +30,17 @@
 
 <form action="upload" method="post" enctype="multipart/form-data">
   <%--enctype 	规定在发送表单数据之前如何对其进行编码。--%>
-
   uploader:<input type="text" name="upLoader">
   select file:<input type="file" name="upLoad">
   <input type="submit" value="Upload">
 
 </form>
+
+
+<form action="GoMulti.action" method="post">
+  <button value="Gomulti">Gomulti</button>
+</form>
+
 
 </body>
 </html>

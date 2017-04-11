@@ -21,8 +21,6 @@
     <h1>testvalue = <s:property value="@prim.edwin.struts01.HelloAction@testvalue"/></h1>
     <h1>prim.edwin.struts01.helloaction.test();<s:property value="@prim.edwin.struts01.HelloAction@test()"/></h1>
     <%--<h1>max(2,3)=<s:property value="@@max(2, 3)"></s:property></h1>--%>
-
-
 </div>
 
 </body>
