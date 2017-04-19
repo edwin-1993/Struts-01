@@ -12,7 +12,7 @@
   <title>INDEX</title>
 </head>
 <body>
-<h1> welcome 232131232133 </h1>
+<h1> welcome 222233</h1>
 <form action="hello.action" method="post">
   <label for = "name1"> input your name !</label>
   <input type = "text" id = "name1" name="name" value="input name"/>
