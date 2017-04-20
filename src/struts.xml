@@ -68,8 +68,16 @@
 
         </action>
 
+        <action name="downloadAction" class="prim.edwin.struts02.DownLoadAction" method="execute">
+            <param name="downloadPath">/multiUpload</param>
+            <result name="success" type="stream">
+                <param name="inputName">TargetFile</param>
+                <!--inputName 设置了下载文件的输入流属性名，这个名字必须和 DowanloadAction.java 中的返回输入流的那个方法保持一定规则性，-->
 
+                <param name="contentDisposition">attachment;filename = ${filename}</param>
+                <!--contentDisposition 设置下载文件的文件名，这里直接使用文件本身的文件名。-->
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
     </package>
-
-
 </struts>

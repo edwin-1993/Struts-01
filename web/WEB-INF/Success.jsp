@@ -25,7 +25,8 @@
     file address:<p> <%=basePath %><s:property value="'upLoadFiles/'
     + upLoadFileName"/></p><br/>
 
-    <%=basePath %><br/>
+    basepath:<%=basePath %><br/>
+    contextpath:<%=path %><br/>
     file path:<s:property value=" + filePath"/>;
 </body>
 </html>
